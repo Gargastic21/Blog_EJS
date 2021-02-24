@@ -1,0 +1,14 @@
+<%- include('../views/partials/header.ejs'); -%>
+
+<h1><%= HomeDisplay %></h1>
+<p><%= startingContent %></p>
+<% newpost.forEach(function(justAVariabe){  %>
+   <h1><%= justAVariabe.title %></h1>
+   <p><%= justAVariabe.content.substring(0,100) + "..."; %>
+   <a href="/posts/<%= justAVariabe.title %>">Read More</a>
+   </p>
+<% }); %>
+
+
+
+<%- include('../views/partials/footer.ejs'); -%>
